@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ilgi Alanlarim | AFOZDEN</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-code me-2"></i>Ahmet Fatih Ozden
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Hakkimda</a></li>
+          <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+          <li class="nav-item"><a class="nav-link" href="sehrim.html">Sehrim</a></li>
+          <li class="nav-item"><a class="nav-link" href="mirasimiz.html">Mirasimiz</a></li>
+          <li class="nav-item"><a class="nav-link active" href="ilgialanlarim.html">Ilgi Alanlarim</a></li>
+          <li class="nav-item"><a class="nav-link" href="iletisim.html">Iletisim</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.php"><i class="fas fa-lock me-1"></i>Giris</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="sayfa-baslik">
+    <h1><i class="fas fa-clapperboard me-3"></i>Film ve Dizi Dunyasi</h1>
+    <p>Canli verilerle yeni seyler kesfet, kategorilere goz at, arama yap.</p>
+  </div>
+
+  <section class="py-5">
+    <div class="container">
+      <div class="film-simple-shell">
+        <div class="kart film-simple-intro">
+          <div class="film-simple-intro-icon"><i class="fas fa-film"></i></div>
+          <div>
+            <h3 class="font-baslik mb-2">Film ve Dizi Dunyasi</h3>
+            <p class="text-secondary mb-0">
+              Asagidaki veriler film API'si uzerinden cekiliyor. Kategori secerek gezebilir
+              ya da dogrudan istedigin filmi aratabilirsin.
+            </p>
+          </div>
+        </div>
+
+        <form id="filmAramaFormu" class="arama-kutusu film-search-box" novalidate>
+          <input
+            id="filmAramaInput"
+            type="text"
+            class="form-control"
+            placeholder="Film veya dizi ara..."
+            maxlength="100"
+          >
+          <button type="submit" aria-label="Film ara">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+
+        <div class="kategori-satiri film-filter-row d-flex flex-wrap justify-content-center gap-2">
+          <button type="button" class="kategori-buton aktif" data-kategori="featured" data-label="Populer Filmler">
+            <i class="fas fa-fire me-2"></i>Populer Filmler
+          </button>
+          <button type="button" class="kategori-buton" data-kategori="action" data-label="Aksiyon Filmleri">
+            <i class="fas fa-bolt me-2"></i>Aksiyon
+          </button>
+          <button type="button" class="kategori-buton" data-kategori="scifi" data-label="Bilim Kurgu Filmleri">
+            <i class="fas fa-rocket me-2"></i>Bilim Kurgu
+          </button>
+          <button type="button" class="kategori-buton" data-kategori="drama" data-label="Dram Filmleri">
+            <i class="fas fa-masks-theater me-2"></i>Dram
+          </button>
+          <button type="button" class="kategori-buton" data-kategori="animation" data-label="Animasyon Filmleri">
+            <i class="fas fa-wand-magic-sparkles me-2"></i>Animasyon
+          </button>
+          <button type="button" class="kategori-buton" data-kategori="thriller" data-label="Gerilim Filmleri">
+            <i class="fas fa-eye me-2"></i>Gerilim
+          </button>
+        </div>
+
+        <div class="film-simple-head">
+          <h2 id="filmBolumBaslik" class="font-baslik ilgi-bolum-baslik mb-0">Populer Filmler</h2>
+          <p id="filmDurum" class="text-secondary mb-0">Filmler yukleniyor...</p>
+        </div>
+
+        <div id="filmYukleniyor" class="spinner-cerceve">
+          <div class="spinner-ozel"></div>
+        </div>
+
+        <div id="filmBilgiKutusu" class="kart film-info-box is-hidden"></div>
+
+        <div id="filmListesi" class="row g-4"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Afozden | Sakarya Universitesi Bilgisayar Muhendisligi</p>
+      <p class="small mt-1 text-muted">Film verileri harici bir API uzerinden canli olarak cekilmektedir.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/ilgialanlarim.js?v=20260515c"></script>
+</body>
+</html>
